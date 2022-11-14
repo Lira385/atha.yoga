@@ -1,0 +1,9 @@
+import time
+from selenium import webdriver
+driver = webdriver.Chrome(executable_path='C:/chromedriver.exe')
+driver.get("https://atha.yoga/")
+time.sleep(1)
+registration = driver.find_element_by_css_selector('body > header > nav > div > div.d-flex.align-items-center.navbar-no-collapse-items.order-lg-last > div > a:nth-child(2)')
+registration.click()
+time.sleep(1)
+driver.quit()
